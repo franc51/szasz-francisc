@@ -1,0 +1,267 @@
+body {
+    margin: 0;
+    font-family: 'Montecarlo';
+    background-color: #fffff7;
+background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ff8b00' fill-opacity='0.18'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+    /* Load Animation starts here */ 
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid rgb(255, 217, 0);
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Add animation to "page content" */
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+  
+  /* Load Animation ENDS here */ 
+
+    /* Navigation STARTS here */ 
+
+    .navigation {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(to bottom, rgb(255, 204, 65), rgb(229, 255, 0));
+        box-shadow: 2px 10px 10px 2px rgb(255, 255, 255);
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        
+      }
+      
+      li {
+        float: left;
+      }
+      
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 4px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: black;
+        transition: 0.3 ease;
+      }
+      
+      /* Change the link color to #111 (black) on hover */
+      a:after {
+        display:block;
+        content: '';
+        border-bottom: solid 1px #000000;  
+        transform: scaleX(0);  
+        transition: transform 300ms ease-in-out;
+      }
+      a:hover:after { transform: scaleX(1); }
+      a.fromRight:after{ transform-origin:100% 50%; }
+      a.fromLeft:after{  transform-origin:  0% 50%; }
+
+    /* CONTAINER STARTS here */ 
+
+
+.my_image {
+    height: 500px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+.my_image:hover {
+  scale: 105%;
+}
+
+.home {
+    margin: 8vh 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+h1 {
+    font-size: 70px;
+}
+
+h1,h2,h3,h4,h5,p {
+    margin: 0;
+}
+
+p {
+    font-size: 28px;
+    margin: 0;
+}
+
+.my_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgb(255, 204, 65), rgb(229, 255, 0));
+       
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 2px 10px 10px 2px rgb(255, 255, 255);
+}
+
+.bio_info{
+   padding: 4vh;
+   text-align: center;
+}
+
+
+.project_image {
+    height: 280px;
+    box-shadow: 1px 10px 10px 5px rgb(158, 152, 152);
+    cursor: pointer;
+    transition: 0.3s ease;
+    border-radius: 20px;
+}
+
+.project_image:hover {
+  scale: 108%;
+  border-radius: 40px;
+}
+
+.projects_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+
+}
+
+.project-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5vh 5vh;
+}
+
+button {
+    height: 50px;
+    width: 200px;
+    margin: 5vh ;
+    border-radius: 12px;
+    background-color: rgb(238, 255, 0);
+    font-family: 'Montecarlo';
+    font-size: 28px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #fffb00;
+    border-radius: 30px
+    
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+
+
+
+section{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+section .container{
+  margin: 100px;
+}
+section h1{
+  font-size: 3rem;
+  margin: 20px;
+}
+section h2{
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+section .text-container{
+   display: flex;
+}
+section .text-container .text-box{
+  margin: 20px;
+  padding: 20px;
+  
+}
+section .text-container .text-box h3{
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px){
+  section h1{
+    font-size: 2rem;
+    text-align: center;
+  }
+  section .text-container{
+    flex-direction: column;
+  }
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+  
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
